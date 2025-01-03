@@ -28,6 +28,7 @@
     "storybook": "^8.4.7"
   },
   "dependencies": {
-    "react": "^19.0.0"
+    "react": "^19.0.0",
+    "redcat-ui-kit": "^1.0.3"
   }
 }
