@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'redcat-ui-kit'
+import { RCButton } from 'rc-fsc-ui-kit'
 
-export const ButtonDefault = ({ label, onClick, className }) => {
+export const ButtonDefault = ({ label, onClick }) => {
     return (
-        <Button label={label} className={className} onClick={onClick} />
+        <RCButton onClick={onClick}>
+            {label}
+        </RCButton>
     );
 };
 
 ButtonDefault.propTypes = {
     label: PropTypes.string.isRequired,
-    className: PropTypes.string,
     onClick: PropTypes.func,
 };
