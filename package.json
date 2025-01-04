@@ -28,7 +28,7 @@
     "storybook": "^8.4.7"
   },
   "dependencies": {
-    "rc-fsc-ui-kit": "^1.0.0",
+    "rc-fsc-ui-kit": "^1.0.18",
     "react": "^19.0.0"
   }
 }
