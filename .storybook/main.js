@@ -5,6 +5,16 @@ module.exports = {
       '@storybook/addon-links',
       '@storybook/addon-essentials',
       '@storybook/addon-interactions',
+      {
+        name: '@storybook/addon-storysource',
+        loaderOptions: {
+          prettierConfig: {
+            singleQuote: true,
+            semi: false,
+            trailingComma: 'es5',
+          },
+        },
+      },
   ],
   framework: {
     name: '@storybook/react-webpack5',

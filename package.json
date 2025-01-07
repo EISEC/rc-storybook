@@ -24,11 +24,13 @@
     "@storybook/react-webpack5": "^8.4.7",
     "@storybook/test": "^8.4.7",
     "babel-loader": "^9.2.1",
+    "component-source": "^0.0.1",
     "prop-types": "^15.8.1",
     "storybook": "^8.4.7"
   },
   "dependencies": {
-    "rc-fsc-ui-kit": "^1.0.18",
+    "@storybook/addon-storysource": "^8.4.7",
+    "rc-fsc-ui-kit": "^1.0.23",
     "react": "^19.0.0"
   }
 }

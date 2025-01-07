@@ -1,12 +1,13 @@
 import React from 'react';
-import { ButtonDefault } from './ButtonDefault';
+import {ButtonDefault} from './ButtonDefault';
 import {arrColor} from "../color";
+import {RCButton} from "rc-fsc-ui-kit";
 
 export default {
     title: 'Кнопки',
     component: ButtonDefault,
     argTypes: {
-        bg: {
+        background: {
             control: 'select',
             options: arrColor,
             description: "Цвет фона кнопки",
@@ -24,20 +25,30 @@ export default {
     },
 };
 
-const Template = (args) => <ButtonDefault {...args} />;
+const Template = (props) => <RCButton {...props}>{props.label}</RCButton>;
 
 export const Primary = Template.bind({});
 Primary.args = {
     label: 'Стандартная кнопка',
-    bg: 'red-500',
+    background: 'red-500',
     size: 'large',
-    color: 'white'
+    color: 'white',
 };
 
 export const Custom = Template.bind({});
 Custom.args = {
     label: 'Кастомная кнопка',
-    bg: 'blue-400',
+    background: 'blue-400',
     size: 'large',
-    color: 'white'
+    color: 'white',
+    loader: true,
+};
+
+export const Loader = Template.bind({});
+Loader.args = {
+    label: 'Кастомная кнопка',
+    background: 'beige-950',
+    size: 'large',
+    color: 'white',
+    loader: true,
 };
