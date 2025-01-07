@@ -12,6 +12,12 @@ export default {
             options: arrColor,
             description: "Цвет фона кнопки",
         },
+        outline: {
+            description: 'outline кнопка, цвет меняется в зависимости от цвета текста'
+        },
+        defBtn: {
+          description: 'включает кнопку по умолчанию'
+        },
         color: {
             control: 'select',
             options: arrColor,
@@ -20,7 +26,8 @@ export default {
         size: {
             control: 'select',
             options: ['small', 'large', 'big'],
-            description: 'Размер кнопки'
+            description: 'Размер кнопки',
+            defaults: ['small', 'large', 'big']
         }
     },
 };
@@ -33,15 +40,21 @@ Primary.args = {
     background: 'red-500',
     size: 'large',
     color: 'white',
+    loader: false,
+    outline: false,
+    disabled: false
 };
 
-export const Custom = Template.bind({});
-Custom.args = {
+export const Secondary = Template.bind({});
+Secondary.args = {
     label: 'Кастомная кнопка',
     background: 'blue-400',
     size: 'large',
     color: 'white',
-    loader: true,
+    defBtn: true,
+    loader: false,
+    outline: false,
+    disabled: false
 };
 
 export const Loader = Template.bind({});
@@ -51,4 +64,28 @@ Loader.args = {
     size: 'large',
     color: 'white',
     loader: true,
+    outline: false,
+    disabled: false
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    label: 'Кастомная кнопка',
+    background: 'beige-950',
+    size: 'large',
+    color: 'white',
+    loader: false,
+    outline: false,
+    disabled: true
+};
+
+export const Outline = Template.bind({});
+Outline.args = {
+    label: 'Кастомная кнопка',
+    background: 'white',
+    size: 'large',
+    color: 'black-500',
+    loader: false,
+    outline: true,
+    disabled: false
 };
